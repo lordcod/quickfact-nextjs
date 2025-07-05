@@ -2,8 +2,8 @@
 import { openDB } from "idb";
 
 async function loadOrCreate() {
-  if (typeof window === undefined) return;
-  
+  if (typeof window === "undefined") return;
+
   const db = await openDB("dpop-db", 1, {
     upgrade(db) {
       db.createObjectStore("keys");

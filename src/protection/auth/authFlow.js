@@ -1,8 +1,8 @@
 import axios from "axios";
-import { getFingerprint } from "@/shared/security/fingerprint";   
-import { generateDpopToken } from "@/shared/security/dpop";       
-import { keypair } from "@/shared/security/keypair";             
-import { getPoW } from "@/shared/security/pow";                  
+import { getFingerprint } from "@/protection/integrity/fingerprint";   
+import { generateDpopToken } from "@/protection/integrity/dpop";       
+import { keypair } from "@/protection/integrity/keypair";             
+import { getPoW } from "@/protection/integrity/pow";                  
 import { apiClient } from "@/api/apiClient";
 
 
