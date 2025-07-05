@@ -1,0 +1,13 @@
+{
+  "IndexPage": {
+    "title": "QuickFact",
+    "description": "This pet project demonstrates the implementation of public API protection using the challenge-response protocol (https://gist.github.com/lordcod/142c90a1c7d30ebee39669d532f8303a), while showing a random fact with multilingual support.",
+    "language": {
+      "en": "English",
+      "ru": "Russian"
+    },
+    "loading": "Loading...",
+    "error": "Failed to load fact. Please try again later.",
+    "getAnotherFact": "Get another fact"
+  }
+}

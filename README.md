@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# QuickFact
 
-## Getting Started
+**QuickFact** — это пет-проект, демонстрирующий реализацию защиты публичного API с помощью протокола challenge-response (подробности [здесь](https://gist.github.com/lordcod/142c90a1c7d30ebee39669d532f8303a)).  
+Вместе с этим проект показывает случайный факт с поддержкой нескольких языков.
 
-First, run the development server:
+---
+
+## Структура проекта
+
+- **Frontend**: [Next.js](https://nextjs.org/) — React-приложение с мультиязычной поддержкой, которое запрашивает факты с backend и отображает их пользователю.
+- **Backend**: [FastAPI](https://fastapi.tiangolo.com/) — REST API, реализующее защищённый по challenge-response протоколу доступ к данным.  
+
+---
+
+## Основные возможности
+
+- Защищённый публичный API с challenge-response протоколом для предотвращения неавторизованного доступа  
+- Запрос случайного факта с локализацией по выбранному языку  
+- UI с переключателем языков и плавной анимацией загрузки  
+- Современный дизайн с использованием Tailwind CSS и framer-motion  
+- Разделение frontend и backend для гибкости деплоя
+
+---
+
+## Запуск проекта локально
+
+### 1. Frontend (Next.js)
 
 ```bash
+cd frontend
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Приложение откроется на `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 2. Backend (FastAPI)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+````
 
-## Learn More
+API будет доступен по адресу `http://localhost:8000`
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Технологии
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* FastAPI
+* Next.js (React, Next Intl)
+* Tailwind CSS
+* Framer Motion
+* challenge-response API protection protocol
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Ссылки
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* [Протокол challenge-response](https://gist.github.com/lordcod/142c90a1c7d30ebee39669d532f8303a)
+* [FastAPI Documentation](https://fastapi.tiangolo.com/)
+* [Next.js Documentation](https://nextjs.org/docs)
+
+---
+
+## Лицензия
+
+MIT
+
+---
+
+Спасибо за использование QuickFact! Если есть вопросы или идеи — открывайте issue или pull request.
